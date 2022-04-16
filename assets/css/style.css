@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial;
+}
+#header{
+    height: 46px;
+    background-color: #000;
+}
+
+#nav {
+
+}
+/* (Đầu video) display có Inherited:no nên mới hiện như vậy */
+#nav li{
+    display: inline-block;
+}
+
+#nav li a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block; /* thẻ a có display: inline là mặc định nên không có width-height và khi đó click chuột vào là auto*auto; còn khi set display: inline-block thì có kích thước con số*/
+}
+/* khi li được hover, thì a cũng được hover */
+#nav li:hover a{
+    color: #000;
+    background-color: #ccc;
+}
+/*
+-------Thay cho  #nav li a{
+            line-height: 46px;
+            padding: 0 24px;
+          }---------------
+#nav li{
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+*/
+
+
+#nav .subnav{
+    display: none;
+}
+
+
+#slider{
+    min-height: 500px;
+    background-color: rgba(34, 30, 30, 0.78);
+}
