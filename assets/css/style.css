@@ -9,13 +9,18 @@ html{
 #header{
     height: 46px;
     background-color: #000;
+    position: fixed; /* làm content bị co lại vì tính chất kế thừa width của thẻ block không còn nữa, vì postion nổi lên trên layer cao hơn, nên có width = width content của nó */
+    /* gây ra tình trạng khi inspect element Slider thấy nó bao phủ cả Header -> thêm margin-top cho slider*/
+    top: 0px;
+    left: 0px;
+    right: 0px; /* giải quyết content bị co */
 }
 
 #nav{
     display: inline-block;
 }
 #nav, .subnav {
-    list-style-type: none; /* bỏ dấu chấm trước li, CSS vào thẻ li cũng được */
+    list-style-type: none;
 }
 
 #nav > li{
@@ -66,13 +71,13 @@ html{
 }
 
 #header .search-btn{
-    float: right; /* thẻ div mặc định kế thừa width của cha nên nằm riêng 1 dòng dưới chiếm 100% nên dùng thuộc tính này đẩy lên*/
+    float: right;
     padding: 0 21px;
 
 }
 
 #header .search-btn:hover{
-    cursor: pointer; /* thay đổi hình dạng chuột khi trỏ chuột vào */
+    cursor: pointer;
     background-color: #f44336;
 }
 
@@ -84,4 +89,5 @@ html{
 #slider{
     min-height: 500px;
     background-color: rgba(34, 30, 30, 0.78);
+    margin-top: 46px;
 }
