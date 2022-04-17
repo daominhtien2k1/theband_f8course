@@ -90,7 +90,7 @@ html{
     min-height: 500px;
     background-color: rgba(34, 30, 30, 0.78);
     margin-top: 46px;
-    padding-top: 50%; /* 50% theo width của chính nó */
+    padding-top: 50%;
     background-image: url('/assets/img/slider/slider1.jpg');
     background-position: top center;
     background-size: cover;
@@ -138,4 +138,25 @@ html{
     font-size: 15px;
     text-align: justify;
     line-height: 1.4;
+}
+#content .members-list{
+    margin-top: 48px;
+    /*overflow: hidden; !* sửa lỗi do float gây ra*!*/
+}
+#content .member-item{
+    float: left; /* di chuyển chuột vào inspect members-list lại thấy không ôm 3 con member-item vì thẻ float chui ra mặt phẳng khác, và cha co lại. Cách sửa:  overflow: hidden  */
+    width: 33.333333%;
+    text-align: center;
+}
+#content .member-name{
+     font-size: 15px;
+
+}
+#content .member-img{
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+.clear{
+    clear: both;  /* sửa lỗi do float gây ra */
 }
