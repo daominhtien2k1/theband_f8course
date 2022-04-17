@@ -11,6 +11,9 @@ html{
     background-color: #000;
 }
 
+#nav{
+    display: inline-block;
+}
 #nav, .subnav {
     list-style-type: none; /* bỏ dấu chấm trước li, CSS vào thẻ li cũng được */
 }
@@ -23,7 +26,6 @@ html{
     position: relative;
 }
 
-/* chỉ ảnh hưởng tới li là con cấp 1 của nav */
 #nav > li > a{
     color: #fff;
     text-transform: uppercase;
@@ -32,7 +34,7 @@ html{
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
-    display: block; /* đổi từ display: inline-block sang block vì inline-block chứa đặc điểm inline là co lại kích cỡ vừa content mà không kế thừa width của cha */
+    display: block;
 }
 
 #nav li:hover .subnav {
@@ -46,7 +48,7 @@ html{
 #nav .subnav{
     display: none;
     min-width: 160px;
-    position: absolute; /* vô tình lại đúng vị trí đẹp như vậy, cần có kinh nghiệm nhiều mới hiểu được, thêm top: 100%, left: 0% */
+    position: absolute;
     top: 100%;
     left: 0%;
     background-color: #fff;
@@ -55,10 +57,30 @@ html{
 
 #nav .subnav a{
     color: #000;
-    padding: 0 12px; /* dùng nguyên tắc chia hết cho 4 */
+    padding: 0 12px;
     line-height: 38px;
 }
 
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+
+#header .search-btn{
+    float: right; /* thẻ div mặc định kế thừa width của cha nên nằm riêng 1 dòng dưới chiếm 100% nên dùng thuộc tính này đẩy lên*/
+    padding: 0 21px;
+
+}
+
+#header .search-btn:hover{
+    cursor: pointer; /* thay đổi hình dạng chuột khi trỏ chuột vào */
+    background-color: #f44336;
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
 #slider{
     min-height: 500px;
     background-color: rgba(34, 30, 30, 0.78);
