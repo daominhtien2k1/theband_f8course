@@ -1,12 +1,14 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     font-family: Arial;
 }
-#header{
+
+#header {
     height: 46px;
     background-color: #000;
     position: fixed;
@@ -16,26 +18,28 @@ html{
     z-index: 1;
 }
 
-#nav{
+#nav {
     display: inline-block;
 }
+
 #nav, .subnav {
     list-style-type: none;
 }
 
-#nav > li{
+#nav > li {
     display: inline-block;
 }
 
-#nav li{
+#nav li {
     position: relative;
 }
 
-#nav > li > a{
+#nav > li > a {
     color: #fff;
     text-transform: uppercase;
 }
-#nav li a{
+
+#nav li a {
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
@@ -45,12 +49,13 @@ html{
 #nav li:hover .subnav {
     display: block;
 }
-#nav .subnav li:hover a, #nav > li:hover > a{
+
+#nav .subnav li:hover a, #nav > li:hover > a {
     color: #000;
     background-color: #ccc;
 }
 
-#nav .subnav{
+#nav .subnav {
     display: none;
     min-width: 160px;
     position: absolute;
@@ -60,33 +65,34 @@ html{
     box-shadow: 0 0 10px;
 }
 
-#nav .subnav a{
+#nav .subnav a {
     color: #000;
     padding: 0 12px;
     line-height: 38px;
 }
 
-#nav .nav-arrow-down{
+#nav .nav-arrow-down {
     font-size: 14px;
 }
 
-#header .search-btn{
+#header .search-btn {
     float: right;
     padding: 0 21px;
 
 }
 
-#header .search-btn:hover{
+#header .search-btn:hover {
     cursor: pointer;
     background-color: #f44336;
 }
 
-#header .search-icon{
+#header .search-icon {
     color: #fff;
     font-size: 20px;
     line-height: 46px;
 }
-#slider{
+
+#slider {
     min-height: 500px;
     background-color: rgba(34, 30, 30, 0.78);
     margin-top: 46px;
@@ -96,96 +102,113 @@ html{
     background-size: cover;
     background-repeat: no-repeat;
 }
-#slider .text-content{
+
+#slider .text-content {
     position: absolute;
     bottom: 47px;
     color: #fff;
     width: 100%;
     text-align: center;
 }
-#slider .text-heading{
+
+#slider .text-heading {
     font-weight: 500;
     font-size: 24px;
 }
-#slider .text-description{
+
+#slider .text-description {
     font-size: 15px;
     margin-top: 25px;
 }
-#content{
+
+#content {
 
 }
-#content .content-section{
+
+#content .content-section {
     width: 800px;
     padding: 64px 0;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
 }
-#content .section-heading{
+
+#content .section-heading {
     font-size: 30px;
     text-align: center;
     font-weight: 500;
     letter-spacing: 4px;
 }
-#content .section-sub-heading{
+
+#content .section-sub-heading {
     font-size: 15px;
     text-align: center;
     margin-top: 25px;
     font-style: italic;
     opacity: 0.6;
 }
-#content .about-text{
+
+#content .about-text {
     margin-top: 25px;
     font-size: 15px;
     text-align: justify;
     line-height: 1.4;
 }
-#content .members-list{
+
+#content .members-list {
     margin-top: 48px;
 }
-#content .member-item{
+
+#content .member-item {
     float: left;
     width: 33.333333%;
     text-align: center;
 }
-#content .member-name{
-     font-size: 15px;
+
+#content .member-name {
+    font-size: 15px;
 
 }
-#content .member-img{
+
+#content .member-img {
     width: 154px;
     margin-top: 15px;
     border-radius: 4px;
 }
-.clear{
+
+.clear {
     clear: both;
 }
 
-.text-white{
+.text-white {
     color: #fff !important;
 }
-.tour-section{
-    background-color: #000; /* tạo lớp cha div class="tour-section" vì margin content không thể set background */
+
+.tour-section {
+    background-color: #000;
 }
-.tickets-list{
+
+.tickets-list {
     background-color: #fff;
     margin-top: 40px;
     list-style: none;
 }
-.tickets-list li{
+
+.tickets-list li {
     color: #757575;
     font-size: 15px;
     padding: 11px 16px;
     border-bottom: 1px solid #ddd;
 }
-.tickets-list .sold-out{
+
+.tickets-list .sold-out {
     background-color: #f44336;
     color: #fff;
     padding: 3px 4px;
     margin-left: 16px;
 }
-.tickets-list .quantity{
-    float: right; /* thẻ đang có tính chất inline mà thêm float vào thì thành thẻ có tính chất block */
-    /* Các thẻ HTML được hiển thị mặc định inline là <span>, <a>, <strong>, <b>, <i> */
+
+.tickets-list .quantity {
+    float: right;
     width: 24px;
     height: 24px;
     background-color: #000;
@@ -193,8 +216,63 @@ html{
     border-radius: 50%;
     text-align: center;
     line-height: 24px;
-    margin-top: -3px; /* có tính chất block mới dùng được margin */
+    margin-top: -3px;
 }
-#footer{
+
+.places-list {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: -8px; /* kĩ thuật padding 3 item rồi cho margin left-right */
+    margin-right: -8px;
+}
+
+.place-item {
+    float: left;
+    width: 33.3333333%;
+    padding: 0 8px;
+}
+
+.place-body {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    margin-top: 15px;
+
+}
+
+.place-desc {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px; /* thẻ a mặc định là inline nên khi padding sẽ đè lên phần tử trước */
+    display: inline-block;
+    margin-top: 15px;
+}
+.place-buy-btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+.place-img {
+    width: 100%;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+#footer {
 
 }
