@@ -302,8 +302,26 @@ html {
     background-color: #ccc;
     cursor: pointer;
 }
+.map-section img{ /* cho nhầm thành .map-section thành ra trang bị kì cục khi width các ảnh bị cách lề*/
+    width: 100%;
+}
 #footer {
-
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .social-list{
+    font-size: 24px;
+}
+#footer .social-list a{
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+}
+#footer .social-list a:hover{
+    color: rgba(0,0,0,0.3);
+}
+#footer .copyright{
+    margin-top: 15px;
+    color: rgba(0,0,0,0.6);
 }
 
 .col{
@@ -324,7 +342,7 @@ html {
     margin-left: -8px;
     margin-right: -8px;
 }
-.row:after{ /*thay cho <div class="clear" */
+.row:after{
     content: "";
     display: block;
     clear: both;
